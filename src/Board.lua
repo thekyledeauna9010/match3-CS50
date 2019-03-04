@@ -4,8 +4,8 @@
 
     -- Board Class --
 
-    Author: Colton Ogden
-    cogden@cs50.harvard.edu
+    Author: Colton Ogden/Carlyle Deauna
+    cogden@cs50.harvard.edu/thekyledeauna9010@gmail.com
 
     The Board is our arrangement of Tiles with which we must try to find matching
     sets of three horizontally or vertically.
@@ -57,7 +57,7 @@ function Board:calculateMatches()
 
     -- horizontal matches first
     for y = 1, 8 do
-        -- CS50: if tile in match is shiny
+        -- CD: Flag detects if tile in match is shiny
         local shinyMatch = false
 
         local colorToMatch = self.tiles[y][1].color
@@ -84,7 +84,7 @@ function Board:calculateMatches()
                         end
                     end
 
-                    -- CS50: if tile in match is shiny add whole row to match table
+                    -- CD: if tile in match is shiny add whole row to match table
                     if shinyMatch then
                         for rowX = 1, 8 do
                             table.insert(match, self.tiles[y][rowX])
@@ -120,7 +120,7 @@ function Board:calculateMatches()
                 end
             end
             
-            -- CS50: if tile in match is shiny add whole row to match table
+            -- CD: if tile in match is shiny add whole row to match table
             if shinyMatch then
                 for rowX = 1, 8 do
                     table.insert(match, self.tiles[y][rowX])
@@ -161,7 +161,7 @@ function Board:calculateMatches()
                         end
                     end
 
-                    -- CS50: if tile in match is shiny add whole column to match table
+                    -- CD: if tile in match is shiny add whole column to match table
                     if shinyMatch then
                         for columnY = 1, 8 do
                             table.insert(match, self.tiles[columnY][x])
@@ -194,7 +194,7 @@ function Board:calculateMatches()
                 end
             end
             
-            -- CS50: if tile in match is shiny add whole column to match table
+            -- CD: if tile in match is shiny add whole column to match table
             if shinyMatch then
                 for columnY = 1, 8 do
                     table.insert(match, self.tiles[columnY][x])
